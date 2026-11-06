@@ -162,7 +162,9 @@
   .cert-issuer{ font-size:12.5px; color:var(--text-faint); }
   a.cert{ display:block; transition:border-color .15s ease; }
   a.cert:hover{ border-color:var(--accent-dim); }
+  .cert-grid .cert:nth-child(n+4){ transition:opacity .28s ease, transform .28s ease; }
   .cert-grid.collapsed .cert:nth-child(n+4){ display:none; }
+  .cert-grid.fading .cert:nth-child(n+4){ opacity:0; transform:translateY(10px); }
   .cert-more{ margin-top:14px; }
   a.cert .cert-link{ display:block; margin-top:8px; font-family:var(--mono); font-size:12px; color:var(--accent); }
 
@@ -458,17 +460,34 @@
     if(btn) btn.addEventListener('click', function(){ prepare(); setTimeout(function(){ window.print(); }, 50); });
   })();
 
-  // Сертификаты: сначала три карточки, остальные по кнопке
+  // Сертификаты: сначала три карточки, остальные по кнопке, с плавным появлением
   (function(){
     var grid = document.getElementById('certGrid'), btn = document.getElementById('certMore');
     if(!grid || !btn) return;
-    var hidden = grid.querySelectorAll('.cert').length - 3;
+    var extra = Array.prototype.slice.call(grid.querySelectorAll('.cert'), 3);
+    var busy = false;
+    function stagger(reverse){
+      extra.forEach(function(c, i){ c.style.transitionDelay = (reverse ? (extra.length - 1 - i) : i) * 45 + 'ms'; });
+    }
     btn.addEventListener('click', function(){
-      var open = grid.classList.toggle('collapsed') === false;
-      btn.textContent = open ? 'Свернуть' : 'Показать ещё ' + hidden;
-      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      if(busy) return; busy = true;
+      var opening = grid.classList.contains('collapsed');
+      if(opening){
+        grid.classList.add('fading'); grid.classList.remove('collapsed');
+        void grid.offsetHeight; stagger(false);
+        grid.classList.remove('fading');
+        btn.textContent = 'Свернуть'; btn.setAttribute('aria-expanded', 'true');
+        setTimeout(function(){ busy = false; }, 300 + extra.length * 45);
+      } else {
+        stagger(true); grid.classList.add('fading');
+        setTimeout(function(){
+          grid.classList.add('collapsed'); grid.classList.remove('fading');
+          btn.textContent = 'Показать ещё ' + extra.length; btn.setAttribute('aria-expanded', 'false');
+          busy = false;
+        }, 300 + extra.length * 45);
+      }
     });
-    window.addEventListener('beforeprint', function(){ grid.classList.remove('collapsed'); });
+    window.addEventListener('beforeprint', function(){ grid.classList.remove('collapsed', 'fading'); });
   })();
 
   // Появление секций при прокрутке
