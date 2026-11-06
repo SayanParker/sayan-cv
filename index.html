@@ -3,14 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#121518">
+<link rel="canonical" href="https://sayanparker.github.io/sayan-cv/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23121518'/%3E%3Ctext x='32' y='44' font-family='Menlo,monospace' font-size='36' font-weight='700' text-anchor='middle' fill='%233fd48f'%3E%E2%9C%93%3C/text%3E%3C/svg%3E">
 <title>Жанболатулы Саян, QA Engineer</title>
 <meta name="description" content="QA Engineer, Астана. Ручное и автоматизированное тестирование, security-тестирование, RBAC, нагрузочное тестирование, AI-Driven QA.">
 <meta property="og:title" content="Жанболатулы Саян, QA Engineer">
-<meta property="og:description" content="4+ года в тестировании веб-платформ. Все виды тестирования, RBAC, автоматизация на Python и Playwright, нагрузка, ЭЦП.">
+<meta property="og:description" content="4+&nbsp;года в тестировании веб-платформ. Все виды тестирования, RBAC, автоматизация на Python и Playwright, нагрузка, ЭЦП.">
 <meta property="og:type" content="profile">
 <meta property="og:locale" content="ru_RU">
+<meta property="og:url" content="https://sayanparker.github.io/sayan-cv/">
+<meta property="og:image" content="https://sayanparker.github.io/sayan-cv/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Жанболатулы Саян","alternateName":"Sayan Zhanbolatuly","jobTitle":"QA Engineer","url":"https://sayanparker.github.io/sayan-cv/","email":"mailto:gagatun.sayan@mail.ru","address":{"@type":"PostalAddress","addressLocality":"Астана","addressCountry":"KZ"},"sameAs":["https://t.me/sayan_parker","https://www.linkedin.com/in/sayan-zhanbolatuly-528935251/","https://github.com/SayanParker"]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root{
     --bg:#121518;
@@ -21,7 +31,7 @@
     --border-soft:#242a30;
     --text:#e8ebee;
     --text-dim:#9ba3ad;
-    --text-faint:#67707a;
+    --text-faint:#8a929c;
     --accent:#7fb0e6;
     --accent-dim:#4a6a93;
     --pass:#3fd48f;
@@ -34,7 +44,7 @@
   }
 
   *{ box-sizing:border-box; margin:0; padding:0; }
-  html{ scroll-behavior:smooth; }
+  html{ scroll-behavior:smooth; color-scheme:dark; }
   body{
     background:var(--bg);
     color:var(--text);
@@ -51,6 +61,8 @@
   }
 
   .wrap{ max-width:var(--maxw); margin:0 auto; padding:0 24px; }
+  .skip{ position:absolute; left:-999px; top:8px; z-index:100; background:var(--accent); color:#0e1114; padding:10px 14px; border-radius:6px; font-family:var(--mono); font-size:13px; }
+  .skip:focus-visible{ left:16px; }
 
   /* nav */
   header.nav{
@@ -66,7 +78,7 @@
   .nav-id{ font-family:var(--mono); font-size:13px; color:var(--text-dim); display:flex; align-items:center; gap:8px; }
   .nav-id .dot{ width:7px; height:7px; border-radius:50%; background:var(--pass); box-shadow:0 0 8px var(--pass); }
   .nav-links{ display:flex; gap:22px; font-family:var(--mono); font-size:13px; color:var(--text-dim); flex-wrap:wrap; }
-  .nav-links a{ transition:color .15s ease; }
+  .nav-links a{ transition:color .15s ease; display:inline-block; padding:4px 0; }
   .nav-links a:hover, .nav-links a:focus-visible{ color:var(--accent); }
 
   /* hero */
@@ -79,7 +91,7 @@
   .terminal-bar{ display:flex; align-items:center; gap:8px; padding:10px 14px; background:var(--surface); border-bottom:1px solid var(--border); }
   .terminal-bar .tdot{ width:10px; height:10px; border-radius:50%; display:inline-block; background:#474d55; }
   .terminal-title{ margin-left:8px; font-family:var(--mono); font-size:12px; color:var(--text-faint); }
-  .terminal-body{ padding:22px 22px 24px; font-family:var(--mono); font-size:13.5px; color:var(--text-dim); min-height:200px; overflow-x:auto; }
+  .terminal-body{ padding:22px 22px 24px; font-family:var(--mono); font-size:13.5px; color:var(--text-dim); min-height:200px; overflow-x:auto; font-variant-numeric:tabular-nums; }
   .terminal-body .line{ white-space:pre; opacity:0; }
   .terminal-body .prompt{ color:var(--accent); }
   .terminal-body .pass{ color:var(--pass); font-weight:600; }
@@ -89,13 +101,14 @@
   @keyframes blink{ 50%{ opacity:0; } }
 
   .hero-cta{ display:flex; gap:12px; margin-top:28px; flex-wrap:wrap; }
-  .btn{ font-family:var(--mono); font-size:13px; padding:12px 18px; border-radius:7px; border:1px solid var(--border); transition:all .15s ease; display:inline-flex; align-items:center; gap:8px; }
+  .btn{ font-family:var(--mono); font-size:13px; padding:12px 18px; border-radius:7px; border:1px solid var(--border); transition:background-color .15s ease, border-color .15s ease, color .15s ease; display:inline-flex; align-items:center; gap:8px; background:none; color:inherit; cursor:pointer; line-height:1.2; }
   .btn-primary{ background:var(--accent); color:#0e1114; border-color:var(--accent); font-weight:600; }
   .btn-primary:hover{ background:#92bdec; }
   .btn-ghost{ color:var(--text-dim); }
   .btn-ghost:hover{ border-color:var(--accent-dim); color:var(--accent); }
 
   /* sections */
+  section, footer{ scroll-margin-top:72px; }
   section{ padding:60px 0; border-bottom:1px solid var(--border-soft); }
   .sec-head{ display:flex; align-items:baseline; gap:14px; margin-bottom:28px; }
   .sec-num{ font-family:var(--mono); font-size:13px; color:var(--text-faint); }
@@ -137,7 +150,7 @@
   .tree-items b{ color:var(--text); font-weight:600; }
 
   .meta-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:22px; margin-top:22px; }
-  .meta-block h4{ font-family:var(--mono); font-size:12px; color:var(--text-faint); text-transform:uppercase; letter-spacing:.08em; margin-bottom:10px; }
+  .meta-block h3{ font-family:var(--mono); font-size:12px; color:var(--text-faint); text-transform:uppercase; letter-spacing:.08em; margin-bottom:10px; }
   .meta-block .row{ display:flex; justify-content:space-between; gap:12px; font-size:14px; color:var(--text-dim); padding:5px 0; border-bottom:1px dashed var(--border-soft); }
   .meta-block .row span:last-child{ color:var(--text); font-family:var(--mono); font-size:12.5px; white-space:nowrap; }
 
@@ -184,9 +197,32 @@
     .tree-folder{ min-width:0; }
     .contact-row .flag{ min-width:0; }
   }
+
+  @media print{
+    :root{ --bg:#fff; --bg-alt:#f3f4f6; --surface:#f7f8fa; --surface-2:#eef0f3; --border:#c9ced5; --border-soft:#e2e5e9;
+      --text:#111; --text-dim:#2f3338; --text-faint:#5e656d; --accent:#1d4f8c; --accent-dim:#1d4f8c;
+      --pass:#1b6f47; --pass-dim:#e4f3ea; --pass-border:#9ccbb1; --warn:#7a4f06; }
+    @page{ margin:14mm; }
+    html{ color-scheme:light; }
+    body{ background:#fff; color:#111; }
+    header.nav, .hero-cta, .cursor, .skip, .suite-chevron, .cert-link{ display:none !important; }
+    .js .reveal, .terminal-body .line{ opacity:1 !important; transform:none !important; transition:none !important; }
+    .hero{ padding:0 0 24px; }
+    section, footer{ padding:22px 0; }
+    .terminal{ box-shadow:none; }
+    .suite, .cert, .highlight-box, .tree, .meta-block{ break-inside:avoid; page-break-inside:avoid; }
+    .sec-head{ break-after:avoid-page; page-break-after:avoid; }
+    section{ break-inside:auto; }
+    .suite > summary{ padding:12px 16px; }
+    .suite-body{ padding:0 16px 14px; }
+    .assertions li, .about-body p{ font-size:12.5pt; }
+    a[href^="http"]:not(.cert)::after{ content:" (" attr(href) ")"; font-size:10px; color:var(--text-faint); }
+    .contact-row .arrow{ display:none; }
+  }
 </style>
 </head>
 <body>
+<a class="skip" href="#main">К содержанию</a>
 
 <header class="nav">
   <div class="nav-inner">
@@ -201,13 +237,13 @@
   </div>
 </header>
 
-<main>
+<main id="main">
   <section class="hero wrap">
     <div class="eyebrow">// resume.spec · Астана, Казахстан</div>
     <h1 class="name">Жанболатулы Саян</h1>
     <div class="role-line">QA Engineer. Ручное и автоматизированное тестирование, security, RBAC, нагрузка</div>
 
-    <div class="terminal" aria-label="Терминал с итогом карьеры">
+    <div class="terminal" role="img" aria-label="Терминал: 2 места работы, 4&nbsp;года 2&nbsp;месяца опыта, 749 автотестов">
       <div class="terminal-bar">
         <span class="tdot"></span><span class="tdot"></span><span class="tdot"></span>
         <span class="terminal-title">zsh · pytest career/ -q</span>
@@ -219,13 +255,14 @@
         <div class="line">  career/platonus     <span class="dim">2024-now </span><span class="fill"> ............</span> <span class="pass">PASS</span></div>
         <div class="line dim">  security   130 tests · rbac   270 tests · total   749 tests</div>
         <div class="line summary"> </div>
-        <div class="line summary">✓ 2 passed, 0 failed · 4 года 2 месяца опыта<span class="cursor"></span></div>
+        <div class="line summary">✓ 2 passed, 0 failed · 4&nbsp;года 2&nbsp;месяца опыта<span class="cursor"></span></div>
       </div>
     </div>
 
     <div class="hero-cta">
       <a class="btn btn-primary" href="mailto:gagatun.sayan@mail.ru">Написать на email</a>
       <a class="btn btn-ghost" href="https://t.me/sayan_parker" target="_blank" rel="noopener">Telegram @sayan_parker</a>
+      <button class="btn btn-ghost" type="button" id="printBtn">Скачать PDF</button>
       <a class="btn btn-ghost" href="#contact">Все контакты ↓</a>
     </div>
   </section>
@@ -238,10 +275,10 @@
     </div>
     <div class="about-body">
       <div class="comment">// зачем нанимать</div>
-      <p>QA Engineer с опытом <strong>4+ года</strong> в тестировании веб-приложений. Единственный тестировщик на продукте: выстроил процесс тестирования с нуля и закрываю полный цикл от анализа требований до контроля релиза на проде. Тестирую микросервисные платформы с API Gateway, бизнес-процессы со статусными моделями и ЭЦП, интеграции между сервисами.</p>
+      <p>QA Engineer с опытом <strong>4+&nbsp;года</strong> в тестировании веб-приложений. Единственный тестировщик на продукте: выстроил процесс тестирования с нуля и закрываю полный цикл от анализа требований до контроля релиза на проде. Тестирую микросервисные платформы с API Gateway, бизнес-процессы со статусными моделями и ЭЦП, интеграции между сервисами.</p>
       <p>Проверяю данные в PostgreSQL, разбираю логи в Grafana и Loki до первопричины сбоя. Автоматизирую регресс на <strong>Python, Pytest и Playwright</strong> с запуском в CI/CD, провожу security-аудит, тестирование ролевой модели доступа (RBAC) и нагрузочное тестирование (Locust). Использую ИИ-агентов как рабочий инструмент: анализ требований, параллельные проверки, автозаведение баг-репортов с логами и скриншотами.</p>
       <div class="highlight-box">
-        <strong>Выстраиваю тестирование с нуля.</strong> Как единственный QA на продукте сам решаю, что проверять вручную, что автоматизировать и что мониторить на проде. Спроектировал тест-стратегию, структуру автотестов на Pytest и Playwright, их запуск в CI и ежедневные проверки прода. Нагрузочным тестированием вместе с архитектором подняли RPS с 30 до 3000.
+        <strong>Выстраиваю тестирование с нуля.</strong> Как единственный QA на продукте сам решаю, что проверять вручную, что автоматизировать и что мониторить на проде. Спроектировал тест-стратегию, структуру автотестов на Pytest и Playwright, их запуск в CI и ежедневные проверки прода. Нагрузочным тестированием вместе с архитектором подняли RPS с&nbsp;30 до&nbsp;3000.
       </div>
     </div>
   </section>
@@ -250,7 +287,7 @@
     <div class="sec-head">
       <span class="sec-num">02</span>
       <h2 class="sec-title">Опыт работы</h2>
-      <span class="sec-path">/experience · 4 года 2 месяца</span>
+      <span class="sec-path">/experience · 4&nbsp;года 2&nbsp;месяца</span>
     </div>
 
     <details class="suite" open>
@@ -264,12 +301,12 @@
       <div class="suite-body">
         <div class="suite-context">platonus.academy · LMS-платформа: 20 микросервисов за API Gateway, Keycloak, PostgreSQL, Kafka</div>
         <ul class="assertions">
-          <li><b>Автоматизация регресса.</b> 749 тестов на Python, Pytest и Playwright с Codegen, отчёты Allure, запуск в GitHub Actions. Ежедневный мониторинг прода с отчётом в Telegram.</li>
-          <li><b>Нагрузочное тестирование.</b> Государственный проект AI SANA на Locust с мониторингом в Grafana: RPS вырос с 30 до 3000.</li>
+          <li><b>Автоматизация регресса.</b> 749&nbsp;тестов на Python, Pytest и Playwright с Codegen, отчёты Allure, запуск в GitHub Actions. Ежедневный мониторинг прода с отчётом в Telegram.</li>
+          <li><b>Нагрузочное тестирование.</b> Государственный проект AI SANA на Locust с мониторингом в Grafana: RPS вырос с&nbsp;30 до&nbsp;3000.</li>
           <li><b>AI-Driven QA.</b> Баг-репорты в Jira создаются автоматически из записей Jam через MCP и Python. ИИ-агенты гоняют security- и функциональные проверки параллельно.</li>
           <li>Функциональное, интеграционное, регрессионное и приёмочное тестирование релизов. Тест-дизайн, тест-кейсы, чек-листы.</li>
-          <li><b>Security-тестирование.</b> Проверил 1085 эндпоинтов в 20 сервисах по OWASP API Top-10: доступ к чужим данным (BOLA/IDOR), права между ролями, утечки персональных данных. Нашёл 22 уязвимости, утечку ИИН исправили в день заведения. Пентест LLM-чат-бота.</li>
-          <li><b>Ролевая модель доступа (RBAC).</b> 270 автотестов на API и Playwright: какая роль что может делать, изоляция данных между организациями, попытки получить чужие права. Проверка на проде после выката.</li>
+          <li><b>Security-тестирование.</b> Проверил 1085&nbsp;эндпоинтов в&nbsp;20&nbsp;сервисах по OWASP API Top-10: доступ к чужим данным (BOLA/IDOR), права между ролями, утечки персональных данных. Нашёл 22&nbsp;уязвимости, утечку ИИН исправили в день заведения. Пентест LLM-чат-бота.</li>
+          <li><b>Ролевая модель доступа (RBAC).</b> 270&nbsp;автотестов на API и Playwright: какая роль что может делать, изоляция данных между организациями, попытки получить чужие права. Проверка на проде после выката.</li>
           <li>Тестирование API в Postman и Swagger: авторизация OAuth2 и Keycloak, заголовки, статус-коды, передача данных между сервисами. Проверка данных SQL-запросами в PostgreSQL (DataGrip).</li>
           <li>Тестирование бизнес-процессов со статусами: документооборот из заявки, подписания ЭЦП, приказа и согласования, проверка переходов и прав ролей. Подписание через NCALayer, автоматизировал сценарий подписи в Playwright.</li>
           <li>Разбор логов сервисов до причины сбоя, работа через терминал, доступ к тестовым стендам через туннели.</li>
@@ -321,17 +358,17 @@
 
     <div class="meta-grid">
       <div class="meta-block">
-        <h4>Языки</h4>
+        <h3>Языки</h3>
         <div class="row"><span>Казахский</span><span>родной</span></div>
         <div class="row"><span>Русский</span><span>C2</span></div>
         <div class="row"><span>Английский</span><span>B2</span></div>
       </div>
       <div class="meta-block">
-        <h4>Образование</h4>
+        <h3>Образование</h3>
         <div class="row"><span>ЕНУ им. Л. Н. Гумилева, Computer Science</span><span>2022</span></div>
       </div>
       <div class="meta-block">
-        <h4>Формат работы</h4>
+        <h3>Формат работы</h3>
         <div class="row"><span>Удалённо / гибрид / офис</span><span>✓</span></div>
         <div class="row"><span>Командировки</span><span>да</span></div>
         <div class="row"><span>Переезд</span><span>нет</span></div>
@@ -350,10 +387,10 @@
       <a class="cert" href="https://www.linkedin.com/learning/certificates/a37a2eb742e1265311ec3b7578ea65b7d33810d3de6fdb7b0d6a6c321d7e0c63" target="_blank" rel="noopener"><span class="cert-year">2024</span><span class="cert-name">Agile Testing</span><span class="cert-issuer">LinkedIn Learning, автор Ash Coleman</span><span class="cert-link">сертификат →</span></a>
       <a class="cert" href="https://www.linkedin.com/learning/certificates/f1dc2fc249e78dd37e35509645f0b968775c0af873f35aa28d90ba5eaf3f48ba" target="_blank" rel="noopener"><span class="cert-year">2024</span><span class="cert-name">Programming Foundations: Software Testing/QA</span><span class="cert-issuer">LinkedIn Learning, автор Meaghan Lewis</span><span class="cert-link">сертификат →</span></a>
       <a class="cert" href="https://www.linkedin.com/learning/certificates/6c7bb4b0e01b0132aa1bf9c98e488a26159905c9b56588fa0cdb256f4829c0c3" target="_blank" rel="noopener"><span class="cert-year">2024</span><span class="cert-name">Scrum: The Basics</span><span class="cert-issuer">LinkedIn Learning, автор Kelley O'Connell</span><span class="cert-link">сертификат →</span></a>
-      <a class="cert" href="https://stepik.org/cert/2532449" target="_blank" rel="noopener"><span class="cert-year">2024</span><span class="cert-name">Postman-ниндзя: с нуля до автотестов</span><span class="cert-issuer">Stepik, 100 баллов, с отличием</span><span class="cert-link">сертификат →</span></a>
+      <a class="cert" href="https://stepik.org/cert/2532449" target="_blank" rel="noopener"><span class="cert-year">2024</span><span class="cert-name">Postman-ниндзя: с нуля до автотестов</span><span class="cert-issuer">Stepik, 100&nbsp;баллов, с отличием</span><span class="cert-link">сертификат →</span></a>
       <a class="cert" href="https://cert.efset.org/V1gKMw" target="_blank" rel="noopener"><span class="cert-year">2023</span><span class="cert-name">EF SET English Certificate: C1 Advanced</span><span class="cert-issuer">EF SET, 64/100, чтение и аудирование</span><span class="cert-link">сертификат →</span></a>
-      <a class="cert" href="https://stepik.org/cert/1909645" target="_blank" rel="noopener"><span class="cert-year">2023</span><span class="cert-name">Тестирование ПО: подготовка к ISTQB Foundation</span><span class="cert-issuer">Stepik, 100 баллов, с отличием</span><span class="cert-link">сертификат →</span></a>
-      <a class="cert" href="https://stepik.org/cert/1708825" target="_blank" rel="noopener"><span class="cert-year">2022</span><span class="cert-name">Тестирование ПО: Postman для тестирования API</span><span class="cert-issuer">Stepik, 100 баллов, с отличием</span><span class="cert-link">сертификат →</span></a>
+      <a class="cert" href="https://stepik.org/cert/1909645" target="_blank" rel="noopener"><span class="cert-year">2023</span><span class="cert-name">Тестирование ПО: подготовка к ISTQB Foundation</span><span class="cert-issuer">Stepik, 100&nbsp;баллов, с отличием</span><span class="cert-link">сертификат →</span></a>
+      <a class="cert" href="https://stepik.org/cert/1708825" target="_blank" rel="noopener"><span class="cert-year">2022</span><span class="cert-name">Тестирование ПО: Postman для тестирования API</span><span class="cert-issuer">Stepik, 100&nbsp;баллов, с отличием</span><span class="cert-link">сертификат →</span></a>
     </div>
   </section>
 
@@ -379,6 +416,7 @@
 
     <div class="foot-note">
       <span>© 2026 Жанболатулы Саян</span>
+      <span>Обновлено 6 ноября 2026</span>
     </div>
   </footer>
 </main>
@@ -400,6 +438,20 @@
         l.style.opacity = 1;
       }, 220 * i + 150);
     });
+  })();
+
+  // Печать: раскрыть опыт и показать все секции, после печати вернуть как было
+  (function(){
+    var opened = [];
+    function prepare(){
+      document.querySelectorAll('details.suite:not([open])').forEach(function(d){ d.open = true; opened.push(d); });
+      document.querySelectorAll('.reveal').forEach(function(e){ e.classList.add('in'); });
+    }
+    function restore(){ opened.forEach(function(d){ d.open = false; }); opened = []; }
+    window.addEventListener('beforeprint', prepare);
+    window.addEventListener('afterprint', restore);
+    var btn = document.getElementById('printBtn');
+    if(btn) btn.addEventListener('click', function(){ prepare(); setTimeout(function(){ window.print(); }, 50); });
   })();
 
   // Появление секций при прокрутке
