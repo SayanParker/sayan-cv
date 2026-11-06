@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Жанболатулы Саян, QA Engineer</title>
-<meta name="description" content="QA Engineer, Астана. Ручное и автоматизированное тестирование, RBAC, нагрузочное тестирование, AI-Driven QA.">
+<meta name="description" content="QA Engineer, Астана. Ручное и автоматизированное тестирование, security-тестирование, RBAC, нагрузочное тестирование, AI-Driven QA.">
 <meta property="og:title" content="Жанболатулы Саян, QA Engineer">
 <meta property="og:description" content="4+ года в тестировании веб-платформ. Все виды тестирования, RBAC, автоматизация на Python и Playwright, нагрузка, ЭЦП.">
 <meta property="og:type" content="profile">
@@ -205,7 +205,7 @@
   <section class="hero wrap">
     <div class="eyebrow">// resume.spec · Астана, Казахстан</div>
     <h1 class="name">Жанболатулы Саян</h1>
-    <div class="role-line">QA Engineer. Ручное и автоматизированное тестирование, RBAC, нагрузка, AI-Driven QA</div>
+    <div class="role-line">QA Engineer. Ручное и автоматизированное тестирование, security, RBAC, нагрузка</div>
 
     <div class="terminal" aria-label="Терминал с итогом карьеры">
       <div class="terminal-bar">
@@ -217,7 +217,7 @@
         <div class="line dim">collected 2 suites</div>
         <div class="line">  career/rocketfirm   <span class="dim">2022-2024</span><span class="fill"> ............</span> <span class="pass">PASS</span></div>
         <div class="line">  career/platonus     <span class="dim">2024-now </span><span class="fill"> ............</span> <span class="pass">PASS</span></div>
-        <div class="line dim">  rbac   270 tests · total   749 tests</div>
+        <div class="line dim">  security   130 tests · rbac   270 tests · total   749 tests</div>
         <div class="line summary"> </div>
         <div class="line summary">✓ 2 passed, 0 failed · 4 года 2 месяца опыта<span class="cursor"></span></div>
       </div>
@@ -239,7 +239,7 @@
     <div class="about-body">
       <div class="comment">// зачем нанимать</div>
       <p>QA Engineer с опытом <strong>4+ года</strong> в тестировании веб-приложений. Единственный тестировщик на продукте: выстроил процесс тестирования с нуля и закрываю полный цикл от анализа требований до контроля релиза на проде. Тестирую микросервисные платформы с API Gateway, бизнес-процессы со статусными моделями и ЭЦП, интеграции между сервисами.</p>
-      <p>Проверяю данные в PostgreSQL, разбираю логи в Grafana и Loki до первопричины сбоя. Автоматизирую регресс на <strong>Python, Pytest и Playwright</strong> с запуском в CI/CD, тестирую ролевую модель доступа (RBAC), провожу нагрузочное тестирование (Locust). Использую ИИ-агентов как рабочий инструмент: анализ требований, параллельные проверки, автозаведение баг-репортов с логами и скриншотами.</p>
+      <p>Проверяю данные в PostgreSQL, разбираю логи в Grafana и Loki до первопричины сбоя. Автоматизирую регресс на <strong>Python, Pytest и Playwright</strong> с запуском в CI/CD, провожу security-аудит, тестирование ролевой модели доступа (RBAC) и нагрузочное тестирование (Locust). Использую ИИ-агентов как рабочий инструмент: анализ требований, параллельные проверки, автозаведение баг-репортов с логами и скриншотами.</p>
       <div class="highlight-box">
         <strong>Беру продукт целиком.</strong> Единственный QA на платформе из 20 микросервисов: ручное тестирование каждого релиза, 749 автотестов в CI, регресс ролевой модели на 270 тестов, нагрузка с 30 до 3000 RPS.
       </div>
@@ -264,16 +264,17 @@
       <div class="suite-body">
         <div class="suite-context">platonus.academy · LMS-платформа: 20 микросервисов за API Gateway, Keycloak, PostgreSQL, Kafka</div>
         <ul class="assertions">
-          <li><b>Ручное тестирование всех видов.</b> Функциональное, интеграционное, регрессионное, E2E и приёмочное тестирование релизов на фронтенде и бэкенде. Полный цикл от анализа требований и тест-дизайна до контроля релиза на проде.</li>
-          <li><b>Ролевая модель доступа (RBAC).</b> Регресс по спецификации: 270 автотестов на API и Playwright, матрица «роль × право × эндпоинт», изоляция данных между организациями, сценарии эскалации привилегий. Read-only верификация на проде после выката.</li>
-          <li><b>Автоматизация регресса.</b> 749 тестов на Python, Pytest и Playwright, отчёты Allure, запуск в GitHub Actions. Ежедневный мониторинг прода по ролям с отчётом в Telegram.</li>
-          <li><b>Нагрузочное тестирование.</b> RPS платформы вырос с 30 до 3000 для государственного проекта AI SANA. Совместно с архитектором, Python и Locust, мониторинг в Grafana.</li>
-          <li><b>AI-Driven QA.</b> ИИ-агенты в рабочем процессе: тест-планы по ТЗ из Confluence, генерация тестовых данных, автозаведение баг-репортов в Jira из записей Jam.</li>
-          <li>Тестирование бизнес-процессов со статусными моделями: документооборот из заявки, подписания ЭЦП, приказа и согласования. Подписание через NCALayer с автоматизацией сценария в Playwright.</li>
-          <li>Тестирование API в Postman и Swagger: OAuth2 и Keycloak, контракты между сервисами. Верификация данных в PostgreSQL, диагностика по логам Grafana и Loki.</li>
-          <li>Тестирование безопасности API: проверки авторизации (BOLA, IDOR) и утечек персональных данных. Найденная утечка ИИН по чужому идентификатору исправлена в день заведения.</li>
-          <li>Тестирование платёжных сервисов: оплата картой, распределение выручки между продавцом и платформой, возвраты.</li>
-          <li>Участие в планировании и уточнении требований, менторство младших QA.</li>
+          <li><b>Ручное тестирование всех видов.</b> Функциональное, интеграционное, регрессионное, E2E и приёмочное тестирование релизов на фронтенде и бэкенде. Тест-кейсы и чек-листы для платформы на микросервисах с API Gateway.</li>
+          <li><b>Security-тестирование.</b> Проверил 1085 эндпоинтов в 20 сервисах по OWASP API Top-10: доступ к чужим данным (BOLA/IDOR), права между ролями, утечки персональных данных. Нашёл 22 уязвимости, утечку ИИН исправили в день заведения. Пентест LLM-чат-бота.</li>
+          <li><b>Ролевая модель доступа (RBAC).</b> 270 автотестов на API и Playwright: какая роль что может делать, изоляция данных между организациями, попытки получить чужие права. Проверка на проде после выката.</li>
+          <li><b>Нагрузочное тестирование.</b> Вместе с архитектором подняли RPS платформы с 30 до 3000 для государственного проекта AI SANA. Python, Locust, мониторинг в Grafana.</li>
+          <li><b>Автоматизация регресса.</b> 749 тестов на Python, Pytest и Playwright с Codegen, отчёты Allure, запуск в GitHub Actions. Ежедневный мониторинг прода с отчётом в Telegram.</li>
+          <li><b>AI-Driven QA.</b> Баг-репорты в Jira создаются автоматически из записей Jam через MCP и Python. ИИ-агенты гоняют security- и функциональные проверки параллельно.</li>
+          <li>Тестирование API в Postman и Swagger: авторизация OAuth2 и Keycloak, заголовки, статус-коды, передача данных между сервисами. Проверка данных SQL-запросами в PostgreSQL (DataGrip).</li>
+          <li>Тестирование бизнес-процессов со статусами: документооборот из заявки, подписания ЭЦП, приказа и согласования, проверка переходов и прав ролей. Подписание через NCALayer, автоматизировал сценарий подписи в Playwright.</li>
+          <li>Разбор логов сервисов до причины сбоя, работа через терминал, доступ к тестовым стендам через туннели.</li>
+          <li>Тестирование платёжных сервисов: оплата картой, распределение выручки, возвраты.</li>
+          <li>Работа с командой разработки: планирование, уточнение требований. Менторство младших коллег.</li>
         </ul>
       </div>
     </details>
@@ -309,7 +310,7 @@
     <div class="tree">
       <div class="tree-root">qa-toolkit/</div>
       <div class="tree-row"><span class="tree-branch">├─</span><span class="tree-folder">test-design/</span><span class="tree-items">тест-планы, реестр рисков, <b>тест-кейсы</b>, чек-листы, матрицы покрытия, приёмочное тестирование</span></div>
-      <div class="tree-row"><span class="tree-branch">├─</span><span class="tree-folder">api-access/</span><span class="tree-items"><b>Postman</b>, Swagger, REST, <b>RBAC</b>, OAuth2, Keycloak, BOLA / IDOR, Charles Proxy</span></div>
+      <div class="tree-row"><span class="tree-branch">├─</span><span class="tree-folder">api-security/</span><span class="tree-items"><b>OWASP API Top-10</b>, BOLA / IDOR, <b>RBAC</b>, OAuth2, Keycloak, Postman, Swagger, Charles Proxy</span></div>
       <div class="tree-row"><span class="tree-branch">├─</span><span class="tree-folder">automation/</span><span class="tree-items"><b>Python</b>, <b>Pytest</b>, <b>Playwright</b>, Allure, GitHub Actions, Git</span></div>
       <div class="tree-row"><span class="tree-branch">├─</span><span class="tree-folder">load-monitoring/</span><span class="tree-items"><b>Locust</b>, <b>Grafana</b>, Loki, Prometheus, мониторинг прода с отчётом в Telegram</span></div>
       <div class="tree-row"><span class="tree-branch">├─</span><span class="tree-folder">data-infra/</span><span class="tree-items"><b>PostgreSQL</b>, SQL (JOIN, GROUP BY), DataGrip, VPN и SSH-туннели к стендам, терминал</span></div>
