@@ -173,7 +173,14 @@
     section{ padding:46px 0; }
     .suite-dates{ margin-left:0; }
     .sec-path{ display:none; }
-    .terminal-body{ font-size:12px; padding:16px; }
+    .terminal-body{ font-size:11.5px; padding:16px 14px; }
+    .terminal-body .line{ white-space:pre-wrap; }
+    .terminal-body .fill{ display:none; }
+    .nav-inner{ padding:10px 16px; }
+    .nav-id{ display:none; }
+    .nav-links{ flex-wrap:nowrap; overflow-x:auto; gap:18px; width:100%; scrollbar-width:none; -webkit-overflow-scrolling:touch; }
+    .nav-links::-webkit-scrollbar{ display:none; }
+    .nav-links a{ white-space:nowrap; padding:4px 0; }
     .tree-folder{ min-width:0; }
     .contact-row .flag{ min-width:0; }
   }
@@ -208,8 +215,8 @@
       <div class="terminal-body" id="termBody">
         <div class="line"><span class="prompt">$</span> pytest career/ -q --tb=short</div>
         <div class="line dim">collected 2 suites</div>
-        <div class="line">  career/rocketfirm   <span class="dim">2022-2024</span> ............ <span class="pass">PASS</span></div>
-        <div class="line">  career/platonus     <span class="dim">2024-now </span> ............ <span class="pass">PASS</span></div>
+        <div class="line">  career/rocketfirm   <span class="dim">2022-2024</span><span class="fill"> ............</span> <span class="pass">PASS</span></div>
+        <div class="line">  career/platonus     <span class="dim">2024-now </span><span class="fill"> ............</span> <span class="pass">PASS</span></div>
         <div class="line dim">  security   130 tests · rbac   270 tests · total   749 tests</div>
         <div class="line summary"> </div>
         <div class="line summary">✓ 2 passed, 0 failed · 4 года 2 месяца опыта<span class="cursor"></span></div>
