@@ -77,8 +77,8 @@
 
   .terminal{ background:var(--bg-alt); border:1px solid var(--border); border-radius:10px; overflow:hidden; box-shadow:0 20px 50px -20px rgba(0,0,0,0.6); }
   .terminal-bar{ display:flex; align-items:center; gap:8px; padding:10px 14px; background:var(--surface); border-bottom:1px solid var(--border); }
-  .terminal-bar span{ width:10px; height:10px; border-radius:50%; display:inline-block; background:#474d55; }
-  .terminal-title{ margin-left:8px; font-family:var(--mono); font-size:12px; color:var(--text-faint); width:auto; height:auto; border-radius:0; background:none; }
+  .terminal-bar .tdot{ width:10px; height:10px; border-radius:50%; display:inline-block; background:#474d55; }
+  .terminal-title{ margin-left:8px; font-family:var(--mono); font-size:12px; color:var(--text-faint); }
   .terminal-body{ padding:22px 22px 24px; font-family:var(--mono); font-size:13.5px; color:var(--text-dim); min-height:200px; overflow-x:auto; }
   .terminal-body .line{ white-space:pre; opacity:0; }
   .terminal-body .prompt{ color:var(--accent); }
@@ -123,8 +123,8 @@
   .suite-body{ padding:0 22px 24px; }
   .suite-context{ font-size:13.5px; color:var(--text-faint); margin-bottom:16px; }
   .assertions{ list-style:none; display:flex; flex-direction:column; gap:11px; }
-  .assertions li{ display:flex; gap:12px; font-size:15px; color:var(--text-dim); align-items:flex-start; }
-  .assertions li::before{ content:"✓"; color:var(--pass); font-family:var(--mono); font-weight:700; flex-shrink:0; margin-top:1px; }
+  .assertions li{ position:relative; padding-left:24px; font-size:15px; color:var(--text-dim); }
+  .assertions li::before{ content:"✓"; position:absolute; left:0; top:0; color:var(--pass); font-family:var(--mono); font-weight:700; }
   .assertions b{ color:var(--text); font-weight:600; }
 
   /* skills */
@@ -199,7 +199,7 @@
 
     <div class="terminal" aria-label="Терминал с итогом карьеры">
       <div class="terminal-bar">
-        <span></span><span></span><span></span>
+        <span class="tdot"></span><span class="tdot"></span><span class="tdot"></span>
         <span class="terminal-title">zsh · pytest career/ -q</span>
       </div>
       <div class="terminal-body" id="termBody">
